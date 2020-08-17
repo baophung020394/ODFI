@@ -1,0 +1,108 @@
+/** ODEFI Styles */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
+:root {
+  --secondary-color: #000000;
+  --font-color: #000000;
+  --bg-color: #CCCCCC;
+  --bg-color-menu: #8E3DDF;
+  --bg-balance: #0D570D;
+  --bg-button-sell: #512380;
+  --bg-angle-down: #707070;
+  --bg-button-buy-susdt: #8E4C4C;
+  --bg-button-confirm-trade: #04C131;
+  --bg-tab-active-trade: #59268C;
+  --bg-stack-amount: #411C66;
+  --color-logo: #AB76DF;
+  --bg-empow: #59268C;
+}
+
+[data-theme="dark"] {
+  --secondary-color: #000000;
+  --font-color: #000000;
+  --bg-color: #1D1E23;
+  --bg-color-menu: #3F4044;
+  --bg-balance: #0D570D;
+  --bg-button-sell: #512380;
+  --bg-angle-down: #707070;
+  --bg-button-buy-susdt: #8E4C4C;
+  --bg-button-confirm-trade: #04C131;
+  --bg-tab-active-trade: #2F3033;
+  --bg-empow: #2F3033;
+  --bg-stack-amount: #3F4044;
+  --color-logo: #AB76DF;
+  --color-pending: #2072FF;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.wrap-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.sidebar-left {
+    width: 100%;
+    border: 1px solid red;
+}
+.right-content {
+    width: 100%;
+    border: 1px solid yellow;
+
+}
+.right-content .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.right-content .top .left {
+    width: 100%;
+    border: 1px solid green;
+}
+.right-content .top .right {
+    width: 100%;
+    border: 1px solid blue;
+}
+.right-content .bottom {
+    width: 100%;
+    border: 1px solid white;
+}
+@media screen and (min-width: 768px) { 
+   
+}
+@media screen and (min-width: 992px) { 
+    .wrap-content {
+        flex-direction: row;
+    }
+    .sidebar-left {
+        width: 30%;
+        border: 1px solid red;
+    }
+    .right-content {
+        width: 70%;
+        border: 1px solid yellow;
+    }
+    .right-content .top {
+        flex-direction: row;
+    }
+    .right-content .top .left {
+        width: 70%;
+        border: 1px solid green;
+    }
+    .right-content .top .right {
+        width: 30%;
+        border: 1px solid blue;
+    }
+    
+}
+@media screen and (min-width: 1024px) { 
+
+}
+@media screen and (min-width: 1200px) { 
+
+}
