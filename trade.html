@@ -178,7 +178,7 @@
                     </table>
                 </div>
                 <div class="filter-bottom">
-                    
+
                 </div>
             </div>
         </div>
@@ -188,29 +188,193 @@
                     <div class="top-header">
                         <span class="title">iETH/sUSDT</span>
                         <div class="group-button-filter">
-                            <span>...</span>
-                            <span>...</span>
-                            <span>...</span>
-                            <span>...</span>
+                            <button class="active">1H</button>
+                            <button>4H</button>
+                            <button>1D</button>
+                            <button>1W</button>
                         </div>
                     </div>
                     <div class="title-badge">
-                        <span>...</span>
-                        <span>...</span>
-                        <span>...</span>
-                        <span>...</span>
-                        <span>...</span>
+                        <span class="active">
+                            <p>...</p>
+                            <p>...</p>
+                        </span>
+                        <span>
+                            <p>...</p>
+                            <p>...</p>
+                        </span>
+                        <span>
+                            <p>...</p>
+                            <p>...</p>
+                        </span>
+                        <span>
+                            <p>...</p>
+                            <p>...</p>
+                        </span>
+                        <span>
+                            <p>...</p>
+                            <p>...</p>
+                        </span>
                     </div>
                 </div>
                 <div class="right">
-                    right
+                    <div class="tabs">
+                        <div class="tab">
+                            <button class="tablinks active" onclick="openCity(event, 'buy')">Buy</button>
+                            <button class="tablinks" onclick="openCity(event, 'sell')">Sell</button>
+                        </div>
+
+                        <div class="tabcontents">
+
+                            <div id="buy" class="tabcontent">
+                                <div class="sell">
+                                    <div class="label">
+                                        <span>Sell:</span>
+                                        <span>Balance: 1000.000USD</span>
+                                    </div>
+                                    <div class="susdt">
+                                        <div class="sus color-susdt">
+                                            <span class="circle"></span>
+                                            <span>sUSDT</span>
+                                        </div>
+                                        <div class="balance">
+                                            <span>
+                                                161516161.121215
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buy">
+                                    <div class="label">
+                                        <span>Buy:</span>
+                                        <span>Balance: 0.8 BTC</span>
+                                    </div>
+                                    <div class="susdt">
+                                        <div class="sus color-susdt">
+                                            <span class="circle"></span>
+                                            <span>sUSDT</span>
+                                        </div>
+                                        <div class="balance">
+                                            <span>
+                                                10000.0001
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-percent">
+                                    <div class="group-button-filter">
+                                        <button class="active">1H</button>
+                                        <button>4H</button>
+                                        <button>1D</button>
+                                        <button>1W</button>
+                                    </div>
+                                    <table>
+                                        <thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Price</td>
+                                                    <td>1 sUSDT = 1000.123123 USD </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>USD VALUE</td>
+                                                    <td>1.123123 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FEE</td>
+                                                    <td>5 BTC (0.1%)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ODIFE MINE</td>
+                                                    <td>300,000 ($0.12)</td>
+                                                </tr>
+                                            </tbody>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <button class="confirm-trade">
+                                    Confirm trade
+                                </button>
+                            </div>
+
+                            <div id="sell" class="tabcontent">
+                                <div class="sell">
+                                    <div class="label">
+                                        <span>Sell:</span>
+                                        <span>Balance: 1000.000USD</span>
+                                    </div>
+                                    <div class="susdt">
+                                        <div class="sus color-susdt">
+                                            <span class="circle"></span>
+                                            <span>sUSDT</span>
+                                        </div>
+                                        <div class="balance">
+                                            <span>
+                                                161516161.121215
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buy">
+                                    <div class="label">
+                                        <span>Buy:</span>
+                                        <span>Balance: 0.8 BTC</span>
+                                    </div>
+                                    <div class="susdt">
+                                        <div class="sus color-susdt">
+                                            <span class="circle"></span>
+                                            <span>sUSDT</span>
+                                        </div>
+                                        <div class="balance">
+                                            <span>
+                                                10000.0001
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-percent">
+                                    <div class="group-button-filter">
+                                        <button class="active">1H</button>
+                                        <button>4H</button>
+                                        <button>1D</button>
+                                        <button>1W</button>
+                                    </div>
+                                    <table>
+                                        <thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Price</td>
+                                                    <td>1 sUSDT = 1000.123123 USD </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>USD VALUE</td>
+                                                    <td>1.123123 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FEE</td>
+                                                    <td>5 BTC (0.1%)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ODIFE MINE</td>
+                                                    <td>300,000 ($0.12)</td>
+                                                </tr>
+                                            </tbody>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <button class="confirm-trade">
+                                    Confirm trade
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="bottom">
                 bottom
             </div>
         </div>
-        
+
     </div>
 
     <script src="./assets/js/jquery.min.js"></script>
