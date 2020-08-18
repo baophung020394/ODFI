@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Trade</title>
 </head>
@@ -41,8 +42,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
+                            <tr class="active">
+                                <td >
                                     <div>
                                         <img src="./assets/img/Group 2015.png" alt="">
                                         <span>ETH/USDT</span>
@@ -129,61 +130,7 @@
                                     <div>$ 18.000</div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <img src="./assets/img/Group 2015.png" alt="">
-                                        <span>ETH/USDT</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>$ 18.000</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <img src="./assets/img/Group 2015.png" alt="">
-                                        <span>ETH/USDT</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>$ 18.000</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <img src="./assets/img/Group 2015.png" alt="">
-                                        <span>ETH/USDT</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>$ 18.000</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <img src="./assets/img/Group 2015.png" alt="">
-                                        <span>ETH/USDT</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>$ 18.000</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <img src="./assets/img/Group 2015.png" alt="">
-                                        <span>ETH/USDT</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>$ 18.000</div>
-                                </td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -206,32 +153,32 @@
                     </div>
                     <div class="title-badge">
                         <span class="active">
-                            <p>...</p>
-                            <p>...</p>
+                            <p>PRICE</p>
+                            <p>$10,633.00</p>
                         </span>
                         <span>
-                            <p>...</p>
-                            <p>...</p>
+                            <p>24H CHANGE</p>
+                            <p>+20,5%</p>
                         </span>
                         <span>
-                            <p>...</p>
-                            <p>...</p>
+                            <p>24H HIGH</p>
+                            <p>$10,633.00</p>
                         </span>
                         <span>
-                            <p>...</p>
-                            <p>...</p>
+                            <p>24H LOW</p>
+                            <p>$10,633.00</p>
                         </span>
                         <span>
-                            <p>...</p>
-                            <p>...</p>
+                            <p>24H VOLUME</p>
+                            <p>$10,633.00</p>
                         </span>
                     </div>
                 </div>
                 <div class="right">
                     <div class="tabs">
                         <div class="tab">
-                            <button class="tablinks active" onclick="openCity(event, 'buy')">Buy</button>
-                            <button class="tablinks" onclick="openCity(event, 'sell')">Sell</button>
+                            <button class="tablinks active" onclick="openBuySell(event, 'buy')">Buy</button>
+                            <button class="tablinks" onclick="openBuySell(event, 'sell')">Sell</button>
                         </div>
 
                         <div class="tabcontents">
@@ -381,7 +328,513 @@
                 </div>
             </div>
             <div class="bottom">
-                bottom
+                <div class="tabs">
+                    <div class="tab">
+                        <button class="tablinks-bottom active" onclick="openTabBottom(event, 'your')">YOUR</button>
+                        <button class="tablinks-bottom" onclick="openTabBottom(event, 'all')">ALL</button>
+                        <button class="tablinks-bottom" onclick="openTabBottom(event, 'odfi')">ODFI</button>
+                    </div>
+                    <div class="tabcontents">
+                        <div id="your" class="tabcontent-bottom">
+                            <table id="table-bottom" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>DATE | TIME</th>
+                                        <th>PAIRS</th>
+                                        <th>BUYING</th>
+                                        <th>SELLING</th>
+                                        <th>PRICE</th>
+                                        <th>TOTAL</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="all" class="tabcontent-bottom">
+                            <table id="table-bottom" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>DATE | TIME</th>
+                                        <th>PAIRS</th>
+                                        <th>BUYING</th>
+                                        <th>SELLING</th>
+                                        <th>PRICE</th>
+                                        <th>TOTAL</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="odfi" class="tabcontent-bottom">
+                            <table id="table-bottom" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>DATE | TIME</th>
+                                        <th>PAIRS</th>
+                                        <th>BUYING</th>
+                                        <th>SELLING</th>
+                                        <th>PRICE</th>
+                                        <th>TOTAL</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>   
+                                                <span>14-02-2019 | 12:12PM</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>BTC/USD</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>50 BTC</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>35000</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>$11212.3</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span>PENDING</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
