@@ -35,6 +35,10 @@
     --color-pending: #2072ff;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
 body {
     font-family: "Lato", sans-serif;
     background-color: var(--bg-color);
@@ -64,6 +68,7 @@ img {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
 }
 .sidebar-left {
     width: 100%;
@@ -137,6 +142,7 @@ img {
     font-size: 14px;
     padding: 30px 0 30px 0;
     border-bottom: unset;
+    color: var(--font-color);
 }
 .sidebar-left .filtet-top table thead .sorting:first-child {
     background-position-x: 30px;
@@ -253,7 +259,7 @@ img {
 .right-content .top .right {
     margin-top: 10px;
 }
-.tab  {
+.tab {
     display: flex;
     flex-direction: row;
 }
@@ -265,7 +271,7 @@ img {
     padding: 7px 0;
     border-top: 3px solid var(--bg-color);
     text-transform: uppercase;
-    font-weight: bold;  
+    font-weight: bold;
     font-size: 15px;
     border-bottom: 1px solid var(--color-border-line);
 }
@@ -280,7 +286,6 @@ img {
     padding: 7px 0;
     border-top: unset;
     border-bottom: unset;
-    
 }
 .tabcontents {
     background-color: var(--secondary-color);
@@ -289,7 +294,7 @@ img {
 .tabcontents .tabcontent:first-child {
     display: block;
 }
-.tabcontents .tabcontent:nth-child(2){
+.tabcontents .tabcontent:nth-child(2) {
     display: none;
 }
 .confirm-trade {
@@ -302,7 +307,7 @@ img {
     text-transform: uppercase;
 }
 .tabcontent {
-    color: var(--font-color)
+    color: var(--font-color);
 }
 .tabcontent .label {
     text-transform: uppercase;
@@ -354,7 +359,7 @@ img {
 .tabcontent .sell .color-susdt {
     background-color: var(--bg-balance);
 }
-.tabcontent .buy .balance, 
+.tabcontent .buy .balance,
 .tabcontent .sell .balance {
     background-color: var(--bg-button-sell);
     width: 64%;
@@ -386,11 +391,99 @@ img {
     text-align: right;
 }
 /** End Right Content */
+/* Button Change Mode */
+
+/*slider switch css */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+.theme-switch-wrapper em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/* End Button Change Mode */
+/* Market Page */
+.market-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.group-filter-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+.group-filter-search .group-button-filter {
+    margin-bottom: 20px;
+}
+.group-filter-search .group-button-filter span {
+    background-color: var(--bg-color-menu);
+    border-radius: 4px;
+    padding: 10px 8px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+/* End Market Page */
 @media screen and (min-width: 768px) {
     /** Right Content */
     .right-content .top .left .top-header .group-button-filter button {
         width: 19%;
-        padding: 10px 5px; 
+        padding: 10px 5px;
     }
     /** End Right Content */
 }
@@ -400,12 +493,12 @@ img {
     }
     /** Sidebar Left */
     .sidebar-left {
-        width: 30%;
+        width: 25%;
     }
     /** End Sidebar Left */
     /** Right Content */
     .right-content {
-        width: 70%;
+        width: 75%;
         padding: 10px 10px 10px 0;
     }
     .right-content .top {
