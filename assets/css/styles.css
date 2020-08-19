@@ -17,8 +17,8 @@
     --bg-empow: #59268c;
     --color-search-placeholder: #323750;
     --color-border-line: #bdbdbd;
-    --bg-badge-green: #10BA97;
-    --bg-badge-red: #D94454;
+    --bg-badge-green: #10ba97;
+    --bg-badge-red: #d94454;
 }
 
 [data-theme="dark"] {
@@ -102,7 +102,7 @@ img {
 .sidebar-left .sidebar-content {
     background-color: var(--secondary-color);
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
 }
 .sidebar-left .filtet-top {
     text-align: center;
@@ -188,7 +188,7 @@ img {
     border-bottom: unset;
 }
 .sidebar-left .filtet-top table tbody tr td div {
-    background-color: var(--bg-color-menu) ;
+    background-color: var(--bg-color-menu);
     padding: 15px 10px;
 }
 .sidebar-left .filtet-top table tbody tr.active td div {
@@ -218,7 +218,7 @@ img {
 .right-content .top .left {
     background-color: var(--secondary-color);
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
 }
 .right-content .top .left .top-header {
     display: flex;
@@ -269,7 +269,7 @@ img {
 }
 .right-content .top .right {
     margin-top: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
 }
 .tab {
     display: flex;
@@ -470,9 +470,9 @@ input:checked + .slider:before {
 }
 /* End Button Change Mode */
 /* Market Page */
- .body-market {
-        height: 100vh;
-    }
+.body-market {
+    height: 100vh;
+}
 .market-content {
     width: 100%;
     height: 100%;
@@ -487,7 +487,7 @@ input:checked + .slider:before {
     align-items: center;
     background-color: var(--secondary-color);
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
 }
 .group-filter-search .group-button-filter {
     margin-bottom: 20px;
@@ -529,12 +529,12 @@ input:checked + .slider:before {
 }
 .table-market table thead th {
     background-color: var(--bg-tab-active-trade);
-    font-size: 14px ;
+    font-size: 14px;
     padding: 12px 10px;
 }
 .table-market table tbody tr td {
     font-size: 14px;
-    border-bottom:unset;
+    border-bottom: unset;
     color: var(--font-color);
     padding: 12px 10px;
     border-top: 10px solid var(--bg-color) !important;
@@ -569,7 +569,7 @@ input:checked + .slider:before {
 }
 .right-content .bottom {
     margin-top: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
 }
 .right-content .bottom .tab {
     align-items: flex-end;
@@ -647,7 +647,7 @@ input:checked + .slider:before {
 }
 .provide-content .sidebar-right .tabs {
     margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
 }
 .provide-content .provide-tab {
     display: flex;
@@ -674,7 +674,7 @@ input:checked + .slider:before {
     margin-bottom: 5px;
 }
 .provide-content .left-content .provide-tabs {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
     margin-bottom: 30px;
 }
 .provide-content .left-content .tabs .tab {
@@ -698,13 +698,13 @@ input:checked + .slider:before {
 .provide-content .table-provide .tabcontents {
     overflow-x: scroll;
     white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
 }
 .provide-content .table-provide table {
     border-bottom: unset !important;
 }
-.provide-content .table-provide table th, 
-.provide-content .table-provide table tbody tr td { 
+.provide-content .table-provide table th,
+.provide-content .table-provide table tbody tr td {
     border-bottom: unset;
     background-color: var(--secondary-color);
     color: var(--font-color);
@@ -719,6 +719,79 @@ input:checked + .slider:before {
     display: none;
 }
 /* End Provide Page */
+/* Stake Page */
+.stake-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.stake-content .left {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.stake-content .right {
+    width: 100%;
+}
+.stake-content .header h2 {
+    background-color: var(--bg-color-menu);
+    padding: 8px;
+    font-size: 16px;
+}
+.stake-content .left table {
+    width: 100%;
+}
+.stake-content .left table tr td {
+    font-size: 16px;
+    color: var(--font-color);
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+.stake-content .left table tr td:last-child {
+    text-align: right;
+}
+.stake-content .right .tabcontent-bottom .totals {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.stake-content .right .tabcontent-bottom .total-card {
+    background-color: var(--bg-tab-active-trade);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100px;
+    align-items: center;
+    width: 100%;
+}
+.stake-content .right .tab {
+    align-items: flex-end;
+}
+.stake-content .right .tab button {
+    border-top: unset;
+    height: 47px;
+    border-bottom: unset;
+}
+.stake-content .right .tab button.active {
+    background-color: var(--bg-tab-active-trade);
+    color: var(--secondary-color);
+    height: 50px;
+}
+.stake-content .right .tabcontents {
+    background-color: var(--bg-tab-active-trade);
+}
+.stake-content .right .tabcontents table tr td {
+    background-color: var(--secondary-color);
+    font-size: 14px;
+}
+.stake-content .right .tabcontent-bottom:first-child {
+    display: block;
+}
+.stake-content .right .tabcontent-bottom {
+    display: none;
+}
+/* End Stake Page */
 @media screen and (min-width: 768px) {
     /** Right Content */
     .right-content .top .left .top-header .group-button-filter button {
@@ -728,8 +801,8 @@ input:checked + .slider:before {
     }
     /** End Right Content */
     /* Market */
-   
-    .group-filter-search {   
+
+    .group-filter-search {
         flex-direction: row;
         align-items: center;
         padding: 20px 10px;
@@ -739,12 +812,12 @@ input:checked + .slider:before {
     }
     /* End Market */
     /* Provide Page */
-    .provide-content .item-card { 
+    .provide-content .item-card {
         width: 24%;
     }
     .provide-content .table-provide .tabcontents {
         overflow-x: unset;
-        white-space: unset; 
+        white-space: unset;
     }
     /* End Provide Page */
 }
@@ -786,6 +859,23 @@ input:checked + .slider:before {
         width: 29%;
     }
     /* End Privde Page */
+    /* Stake Page */
+    .stake-content {
+        flex-direction: row;
+    }
+    .stake-content .left {
+        width: 29%;
+    }
+    .stake-content .right {
+        width: 70%;
+    }
+    .stake-content .right .tabcontent-bottom .totals {
+        flex-direction: row;
+    }
+    .stake-content .right .tabcontent-bottom .total-card { 
+        width: 20%;
+    }
+    /* End Stake Page */
 }
 @media screen and (min-width: 1024px) {
     /** Right Content */
