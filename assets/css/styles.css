@@ -4,7 +4,6 @@
     --secondary-color: #ffffff;
     --font-color: #000000;
     --bg-color: #cccccc;
-    /* --bg-color: #1D1E23; */
     --bg-color-menu: #8e3ddf;
     --bg-balance: #0d570d;
     --bg-button-sell: #512380;
@@ -790,6 +789,61 @@ input:checked + .slider:before {
 }
 .stake-content .right .tabcontent-bottom {
     display: none;
+}
+.stake-content .right .stake-button {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+.stake-content .right .group-button-filter button {
+    background-color: var(--bg-color-menu);
+    border: 1px solid var(--bg-color-menu);
+    padding: 3px 10px;
+    margin-right: 3px;
+    color: var(--secondary-color);
+    border-radius: 4px;
+    margin-bottom: 60px;
+}
+.stake-content .right .stake-button {
+    /* padding-top: 60px; */
+}
+.stake-content .right .stake-button .susdt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.stake-content .right .stake-button .susdt .sus {
+    width: 70%;
+    background-color: var(--bg-stack-amount);
+    padding-left: 10px;
+}
+.stake-content .right .stake-button .susdt .balance {
+    width: 30%;
+    text-align: center;
+}
+.stake-content .right .stake-button .susdt .color-susdt {
+    background-color: var(--bg-button-buy-susdt);
+}
+.stake-content .right .stake-button .btn-stake {
+    width: 100%;
+    text-align: center;
+}
+.stake-content .right .stake-button .stake-btn {
+    background-color: var(--bg-button-confirm-trade);
+    border:1px solid var(--bg-button-confirm-trade);
+    min-width: 100px;
+    margin: auto;
+    border-radius: 4px;
+    color: var(--secondary-color);
+    padding: 8px 50px;
 }
 /* End Stake Page */
 @media screen and (min-width: 768px) {
