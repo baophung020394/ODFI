@@ -40,7 +40,9 @@
 
 html {
     width: 100%;
-    height: 100%;
+    height: auto;
+    border: 12px solid #000000;
+    border-radius: 20px;
 }
 body {
     font-family: "Lato", sans-serif;
@@ -73,8 +75,6 @@ img {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    border: 12px solid #000000;
-    border-radius: 20px;
 }
 .sidebar-left {
     width: 100%;
@@ -254,7 +254,7 @@ img {
 }
 .right-content .top .left .title-badge span {
     width: 100%;
-    /* height: 100px; */
+    font-size: 14px;
     border: 1px solid var(--bg-color-menu);
     border-radius: 4px;
     margin-bottom: 10px;
@@ -471,7 +471,7 @@ input:checked + .slider:before {
 /* End Button Change Mode */
 /* Market Page */
  .body-market {
-        height: 100%;
+        height: 100vh;
     }
 .market-content {
     width: 100%;
@@ -593,6 +593,10 @@ input:checked + .slider:before {
 .right-content .bottom .tab button:last-child {
     border-right: unset;
 }
+.right-content .bottom .tabcontent-bottom {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
 .right-content .bottom .tabcontent-bottom:first-child {
     display: block;
 }
@@ -617,11 +621,102 @@ input:checked + .slider:before {
     border-bottom: unset;
 }
 /* Provide Page */
+.provide-body {
+    /* height: 100vh; */
+}
+.provide-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
 .provide-content .left-content {
-    width: 70%;
+    width: 100%;
 }
 .provide-content .sidebar-right {
-    width: 29%;
+    width: 100%;
+}
+.provide-content .sidebar-right .tabcontent {
+    display: block;
+}
+.provide-content .header h2 {
+    background-color: var(--bg-color-menu);
+    padding: 8px;
+    font-size: 18px;
+}
+.provide-content .sidebar-right .tabs {
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+}
+.provide-content .provide-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+.provide-content .item-card {
+    background-color: var(--bg-button-sell);
+    border-radius: 4px;
+    padding: 10px 10px;
+    width: 100%;
+    margin-bottom: 30px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.provide-content .item-card p {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.provide-content .left-content .provide-tabs {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+    margin-bottom: 30px;
+}
+.provide-content .left-content .tabs .tab {
+    align-items: flex-end;
+}
+.provide-content .left-content .tabs .tab button {
+    border-top: unset;
+    height: 55px;
+}
+.provide-content .left-content .tabs .tab button.active {
+    background-color: var(--bg-tab-active-trade);
+    color: var(--secondary-color);
+    height: 60px;
+}
+.provide-content .table-provide {
+    margin-bottom: 30px;
+}
+.provide-content .left-content .tabs .tabcontents {
+    background-color: var(--secondary-color);
+}
+.provide-content .table-provide .tabcontents {
+    overflow-x: scroll;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+}
+.provide-content .table-provide table {
+    border-bottom: unset !important;
+}
+.provide-content .table-provide table th, 
+.provide-content .table-provide table tbody tr td { 
+    border-bottom: unset;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+}
+.provide-content .table-provide table tbody tr td.sorting_1 {
+    background-color: var(--secondary-color) !important;
+}
+.provide-content .table-provide .tabcontents .tabcontent-bottom:first-child {
+    display: block;
+}
+.provide-content .table-provide .tabcontents .tabcontent-bottom {
+    display: none;
 }
 /* End Provide Page */
 @media screen and (min-width: 768px) {
@@ -643,6 +738,15 @@ input:checked + .slider:before {
         margin-bottom: 0;
     }
     /* End Market */
+    /* Provide Page */
+    .provide-content .item-card { 
+        width: 24%;
+    }
+    .provide-content .table-provide .tabcontents {
+        overflow-x: unset;
+        white-space: unset; 
+    }
+    /* End Provide Page */
 }
 @media screen and (min-width: 992px) {
     .wrap-content {
@@ -671,6 +775,17 @@ input:checked + .slider:before {
         padding: 15px 5px;
     }
     /** End Right Content */
+    /* Provide Page */
+    .provide-content {
+        flex-direction: row;
+    }
+    .provide-content .left-content {
+        width: 70%;
+    }
+    .provide-content .sidebar-right {
+        width: 29%;
+    }
+    /* End Privde Page */
 }
 @media screen and (min-width: 1024px) {
     /** Right Content */
