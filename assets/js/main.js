@@ -106,3 +106,6 @@ $(document).ready(function () {
         responsive: true
     });
 });
+$(document).on('click', '.btn-login', function() {
+    $(this).parent().find('.wallet').toggleClass('active');
+})
