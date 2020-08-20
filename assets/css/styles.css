@@ -7,7 +7,7 @@
     --bg-balance: #0d570d;
     --bg-button-sell: #512380;
     --bg-angle-down: #707070;
-    --bg-button-buy-susdt: #8e4c4c;
+    --bg-button-buy-susdt: #222222;
     --bg-button-confirm-trade: #04c131;
     --bg-tab-active-trade: #59268c;
     --bg-stack-amount: #411c66;
@@ -24,15 +24,23 @@
     --color-info-user-right: #ffffff;
     --bg-stake-table: #ffffff;
     --bg-badge-purple: #8e3ddf;
+    --bg-header-provide: #8e3ddf;
+    --bg-button-sell2: #512380;
+    --bg-provide-tab: #ffffff;
+
 }
 
 [data-theme="dark"] {
-    --secondary-color: #000000;
+    --bg-provide-tab: #343642;
+    --bg-button-sell2: #1D1E23;
+    --bg-header-provide: #1D1E23;
+    --secondary-color: #020101;
     --font-color: #ffffff;
     --bg-color: #000000;
     --bg-color-menu: #3f4044;
+    /* --bg-color-menu: #3f4044; */
     --bg-balance: #0d570d;
-    --bg-button-sell: #512380;
+    --bg-button-sell: #3f4044;
     --bg-angle-down: #707070;
     --bg-button-buy-susdt: #8e4c4c;
     --bg-button-confirm-trade: #04c131;
@@ -55,7 +63,7 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-color);
-    color: var(--secondary-color);
+    color: #ffffff;
     max-width: 100%;
     margin: 0 auto;
     font-size: 16px;
@@ -108,7 +116,7 @@ img {
 }
 /** Sidebar Left */
 .sidebar-left .sidebar-content {
-    background-color: var(--secondary-color);
+    background-color: var(--bg-provide-tab);
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
 }
@@ -187,20 +195,26 @@ img {
 }
 .sidebar-left .filtet-top table tbody tr {
     /* background-color: var(--bg-color-menu); */
-    border-bottom: 15px solid #ffffff;
+    border-bottom: 15px solid var(--bg-provide-tab);
 }
 .sidebar-left .filtet-top table tbody tr td {
     padding: 0;
     font-weight: bold;
     border-top: unset;
     border-bottom: unset;
+    background-color: var(--bg-provide-tab);
+
 }
 .sidebar-left .filtet-top table tbody tr td div {
     background-color: var(--bg-color-menu);
     padding: 15px 10px;
+    color: #ffffff;
+}
+.sidebar-left .filtet-top table tbody tr td div span {
+    color: #ffffff;
 }
 .sidebar-left .filtet-top table tbody tr.active td div {
-    background-color: var(--bg-button-sell);
+    background-color: var(--bg-button-sell2);
 }
 .sidebar-left .filtet-top table tbody tr td:first-child div {
     display: flex;
@@ -250,6 +264,7 @@ img {
     /* border: 1px solid var(--bg-color-menu); */
     /* border-radius: 4px; */
     background-color: var(--bg-color-menu);
+    color: #ffffff;
 }
 .right-content .top .left .top-header .group-button-filter button.active {
     background-color: var(--bg-color);
@@ -286,7 +301,7 @@ img {
 .tab button {
     width: 100%;
     border: none;
-    background-color: var(--bg-color-menu);
+    background-color: var(--bg-header-provide);
     color: var(--secondary-color);
     padding: 7px 0;
     border-top: 3px solid var(--bg-color);
@@ -299,7 +314,7 @@ img {
     outline: none;
 }
 .tab button.active {
-    background-color: var(--secondary-color);
+    background-color: var(--bg-provide-tab);
     color: var(--font-color);
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -308,7 +323,7 @@ img {
     border-bottom: unset;
 }
 .tabcontents {
-    background-color: var(--secondary-color);
+    background-color: var(--bg-provide-tab);
     padding: 10px;
 }
 .tabcontents .tabcontent:first-child {
@@ -347,13 +362,13 @@ img {
 }
 .tabcontent .buy .susdt span,
 .tabcontent .sell .susdt span {
-    color: var(--secondary-color);
+    color: #ffffff;
 }
 .tabcontent .buy .susdt .circle,
 .tabcontent .sell .susdt .circle {
     height: 26px;
     width: 26px;
-    background-color: var(--secondary-color);
+    background-color: #ffffff;
     border-radius: 50%;
     margin-right: 7px;
 }
@@ -397,7 +412,7 @@ img {
 .tabcontent .table-percent .group-button-filter button {
     width: 24%;
     padding: 3px 0;
-    color: var(--secondary-color);
+    color: #ffffff;
     background-color: var(--bg-color-menu);
     border: 1px solid var(--bg-color-menu);
     border-radius: 4px;
@@ -505,8 +520,9 @@ input:checked + .slider:before {
     border-radius: 4px;
     padding: 10px 8px;
     text-transform: uppercase;
-    color: var(--secondary-color);
+    color: #ffffff;
 }
+
 .group-filter-search .group-button-filter span.active {
     background-color: var(--bg-button-sell);
 }
@@ -539,6 +555,7 @@ input:checked + .slider:before {
     background-color: var(--bg-tab-active-trade);
     font-size: 14px;
     padding: 12px 10px;
+    color: var(--font-color);
 }
 .table-market table tbody tr td {
     font-size: 14px;
@@ -546,6 +563,7 @@ input:checked + .slider:before {
     color: var(--font-color);
     padding: 12px 10px;
     border-top: 10px solid var(--bg-color) !important;
+    background-color: var(--bg-stake-table) !important;
 }
 .table-market table thead tr {
     /* border-radius: 4px; */
@@ -594,7 +612,11 @@ input:checked + .slider:before {
     border-top-right-radius: 4px;
     border-top: unset;
     height: 36px;
+    color: #ffffff;
 }
+.right-content .bottom .tab button.active {
+    color: #ffffff;
+} 
 .right-content .bottom .tab button:first-child {
     border-left: unset;
 }
@@ -649,9 +671,10 @@ input:checked + .slider:before {
     display: block;
 }
 .provide-content .header h2 {
-    background-color: var(--bg-color-menu);
+    background-color: var(--bg-header-provide);
     padding: 8px;
     font-size: 18px;
+    color: #ffffff;
 }
 .provide-content .sidebar-right .tabs {
     margin-bottom: 10px;
@@ -663,10 +686,11 @@ input:checked + .slider:before {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 10px;
-    background-color: var(--secondary-color);
+    background-color: var(--bg-provide-tab);
+    
 }
 .provide-content .item-card {
-    background-color: var(--bg-button-sell);
+    background-color: var(--bg-button-sell2);
     border-radius: 4px;
     padding: 10px 10px;
     width: 100%;
@@ -680,6 +704,7 @@ input:checked + .slider:before {
     font-size: 14px;
     width: 100%;
     margin-bottom: 5px;
+    word-break: break-all;
 }
 .provide-content .left-content .provide-tabs {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
@@ -701,9 +726,10 @@ input:checked + .slider:before {
     margin-bottom: 30px;
 }
 .provide-content .left-content .tabs .tabcontents {
-    background-color: var(--secondary-color);
+    background-color: var(--bg-provide-tab);
 }
-.provide-content .table-provide .tabcontents {
+.provide-content .tabcontents {
+    background-color: var(--bg-provide-tab);
     overflow-x: scroll;
     white-space: nowrap;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
@@ -714,11 +740,11 @@ input:checked + .slider:before {
 .provide-content .table-provide table th,
 .provide-content .table-provide table tbody tr td {
     border-bottom: unset;
-    background-color: var(--secondary-color);
+    background-color: var(--bg-provide-tab);
     color: var(--font-color);
 }
 .provide-content .table-provide table tbody tr td.sorting_1 {
-    background-color: var(--secondary-color) !important;
+    background-color: var(--bg-provide-tab) !important;
 }
 .provide-content .table-provide .tabcontents .tabcontent-bottom:first-child {
     display: block;
@@ -897,6 +923,9 @@ input:checked + .slider:before {
 }
 .stake-content .stake-table {
     margin-top: 10px;
+}
+.stake-content .stake-table table {
+    width: 100%;
 }
 .stake-content .stake-table .header {
     display: flex;
@@ -1090,7 +1119,7 @@ input:checked + .slider:before {
     background-position-y: 3px;
 }
 #header .bg-light {
-    background-color: var(--secondary-color) !important;
+    background-color: var(--bg-stake-table) !important;
 }
 
 #header .navbar-text .info-user {
@@ -1120,7 +1149,12 @@ input:checked + .slider:before {
 #header .navbar-text .info-user .right img {
     width: 10px;
 }
-
+#header .navbar-light .navbar-toggler {
+    border-color: var(--color-info-user);
+}
+#header .navbar {
+    padding: 5px;
+}
 /* End Menu */
 @media screen and (min-width: 768px) {
     /** Right Content */
@@ -1128,6 +1162,10 @@ input:checked + .slider:before {
         width: 19%;
         padding: 10px 5px;
         color: var(--secondary-color);
+    }
+    .right-content .bottom .tabcontent-bottom {
+        overflow-x: unset;
+        white-space: unset;
     }
     /** End Right Content */
     /* Market */
@@ -1140,10 +1178,18 @@ input:checked + .slider:before {
     .group-filter-search .group-button-filter {
         margin-bottom: 0;
     }
+    .table-market { 
+        overflow-x: unset;
+        white-space: unset;
+    }
     /* End Market */
     /* Provide Page */
     .provide-content .item-card {
         width: 24%;
+    }
+    .provide-content .table-provide .tabcontents {
+        overflow-x: unset;
+        white-space: unset;
     }
     .provide-content .table-provide .tabcontents {
         overflow-x: unset;

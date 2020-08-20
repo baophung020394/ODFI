@@ -1,4 +1,5 @@
 /** ODEFI Javascript */
+localStorage.setItem('theme', 'dark');
 const toggleSwitch = document.querySelector('#header #switch-blue');
 const currentTheme = localStorage.getItem('theme');
 
