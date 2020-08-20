@@ -642,6 +642,7 @@ input:checked + .slider:before {
     font-size: 14px;
     color: var(--font-color);
     background-color: var(--bg-provide-tab);
+    padding: 16px;
 }
 .right-content .bottom .tabcontents {
     padding: 0;
@@ -923,6 +924,8 @@ input:checked + .slider:before {
 }
 .stake-content .stake-table {
     margin-top: 10px;
+    white-space: nowrap;
+    overflow-x: scroll;
 }
 .stake-content .stake-table table {
     width: 100%;
@@ -1196,6 +1199,10 @@ input:checked + .slider:before {
         white-space: unset;
     }
     /* End Provide Page */
+    .stake-content .stake-table { 
+        white-space: unset;
+        overflow-x: unset;
+    }
 }
 @media screen and (min-width: 992px) {
     .wrap-content {
