@@ -109,3 +109,6 @@ $(document).ready(function () {
 $(document).on('click', '.btn-login', function() {
     $(this).parent().find('.wallet').toggleClass('active');
 })
+$(document).on('click', '#header .navbar-text .info-user .right', function() {
+    $(this).find('.box-balance').toggleClass('active');
+})
